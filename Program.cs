@@ -17,7 +17,7 @@
 }
 
 int Quadrato(int numero)
-{   
+{
     return numero *= numero;
 }
 
@@ -28,7 +28,7 @@ int[] ElevaArrayAlQuadrato(int[] array)
 
     for (int i = 0; i < newArray.Length; i++)
     {
-        Quadrato(newArray[i]);
+        newArray[i] = Quadrato(newArray[i]);
     }
     return newArray;
 }
@@ -43,7 +43,16 @@ int sommaElementiArray(int[] array)
     return somma;
 }
 
-int[] arrayNumeri = { 2, 6, 7, 5, 3, 9 };
+Console.WriteLine("Inserisci il numero di elementi");
+int n = Convert.ToInt32(Console.ReadLine());
+int[] arrayNumeri = new int[n];
+
+for (int i = 0; i < n; i++)
+{
+    Console.WriteLine($"Inserisci il {i+1}° numero: ");
+    arrayNumeri[i] = Convert.ToInt32(Console.ReadLine());
+}
+
 StampaArray(arrayNumeri);
 StampaArray(ElevaArrayAlQuadrato(arrayNumeri));
 Console.WriteLine("Array originale: ");
