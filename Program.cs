@@ -42,3 +42,11 @@ int sommaElementiArray(int[] array)
     }
     return somma;
 }
+
+int[] arrayNumeri = { 2, 6, 7, 5, 3, 9 };
+StampaArray(arrayNumeri);
+StampaArray(ElevaArrayAlQuadrato(arrayNumeri));
+Console.WriteLine("Array originale: ");
+StampaArray(arrayNumeri);
+Console.WriteLine($"Somma numeri: {sommaElementiArray(arrayNumeri)}");
+Console.WriteLine($"Somma numeri elevati al quadrato: {sommaElementiArray(ElevaArrayAlQuadrato(arrayNumeri))}");
